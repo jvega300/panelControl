@@ -1,0 +1,42 @@
+<section id="newPost" class="post section has-pattern">
+    <div class="container text-center">
+        <div class="contact-inner">
+
+            {{#if errores}}
+                {{#each errores}}
+                    <div class="alert alert-danger">
+                        {{msg}}
+                    </div>
+                {{/each}}
+            {{/if}}
+
+            <h2 class="page-header">Nuevo post</h2>
+
+            {{#if errores}}
+                {{#each errores}}
+                    <div class="alert alert-danger">
+                        {{msg}}
+                    </div>
+                {{/each}}
+            {{/if}}
+            <form action="./newPostSave" method="post">
+                <div class="form-group">
+                    <label for="titulo">Titulo del post</label>
+                    <input type="text" class="form-control" value="Titulo de post" name="p_titulo" placeholder="Nombre de usuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="entrada">Entrada del post</label>
+                    <textarea class="form-control" name="p_entrada" placeholder="Entrada">Entrada del post</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cuerpo">Cuerpo del post</label>
+                    <textarea class="form-control" name="p_cuerpo" placeholder="Cuerpo">Cuerpo del post</textarea>
+                </div>
+
+                <button type="submit" class="btn btn-default">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>

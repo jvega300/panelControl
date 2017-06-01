@@ -1,0 +1,23 @@
+{{#each posts }}
+  <!-- {{@index}} -->
+  {{#if @first}}
+    <div class="col-md-12">
+  {{else}}
+    <div class="col-md-6">
+  {{/if}}
+
+
+      <div class="card">
+          <div class="header">
+              <h4 class="title">{{p_title}}</h4>
+              <p class="category">{{p_head}}</p>
+          </div>
+          <div class="content">
+              <p>{{{p_contet}}}</p>
+          </div>
+          <div class="date">
+            <p>Posteado el {{p_postDate}}</p>
+          </div>
+      </div>
+  </div>
+{{/each}}

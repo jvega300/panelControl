@@ -1,0 +1,26 @@
+{
+  "name": "panelcontrol",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.1",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.2",
+    "express-validator": "^3.2.0",
+    "flash": "^1.1.0",
+    "http": "0.0.0",
+    "jsonwebtoken": "^7.3.0",
+    "method-override": "^2.3.8",
+    "mongoose": "^4.9.5",
+    "morgan": "^1.8.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js --o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

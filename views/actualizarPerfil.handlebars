@@ -1,0 +1,47 @@
+<section id="login" class="contact section has-pattern">
+    <div class="container text-center">
+        <div class="contact-inner">
+
+            {{#if errores}}
+                {{#each errores}}
+                    <div class="alert alert-danger">  
+                        {{msg}}
+                    </div>
+                {{/each}}
+            {{/if}}
+
+            <h2 class="page-header">Actualizar perfil</h2>
+
+            {{#if errores}}
+                {{#each errores}}
+                    <div class="alert alert-danger">  
+                        {{msg}}
+                    </div>
+                {{/each}}
+            {{/if}}
+
+           
+            
+
+            <form action="/actualizarPerfil/{{user._id}}" method="post">
+                <div class="form-group">
+                    <label for="username">Nombre de Usuario</label>
+                    <input type="text" value="{{user.username}}" class="form-control" name="username" placeholder="Nombre de usuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" value="{{user.email}}" class="form-control" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="checkbox">Admin? <input type="checkbox" {{#if user.admin }} checked {{/if}}  name="isadmin"></label>
+                </div>
+                
+                <input type="hidden" name="_method" value="put">
+
+                <button type="submit"  class="btn btn-default">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
