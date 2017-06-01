@@ -2,14 +2,19 @@
 
 Esto es una simple aplicación escrita en NodeJs que funciona como servicio Rest.
 
-Tiene una interfaz escrita con Handlebars.
+Tiene una interfaz escrita con Handlebars. Es simple:
+ - te registras como usuario
+ - editas tu información
+ - cambias tu contraseña
+ - generas posts
+ - Te logueas y deslogueas
 
 La he escrito para probar Passport y Bcrypt como metodos de autenticación seguros.
 
 Para lanzarla hay que seguir estos pasos:
 
 - npm install para bajar las dependencias
-- iniciar tu base Mongo en local -> en el congig.js puedes editar el puerto y el nombre
+- iniciar tu base Mongo en local -> en el config.js puedes editar el puerto y el nombre
 - npm start para arrancar el servidor express
 - Ir al navegador a http://localhost:8080
 
